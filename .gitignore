@@ -1,0 +1,8 @@
+# Paquete de Node
+node_modules/
+# Contraseñas
+. env
+# Archivos del sistema
+. DS_Store
+#Logs
+*.log                                                                                            

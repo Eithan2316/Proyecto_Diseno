@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business sky</title>
-    <link rel="Stylesheet" href="Estilos/style.css">
-    <script src="script.js"></script>
+    <title>Business sky</title><!--Se da un nombre al titulo que aparecerá en la página-->
+    <link rel="Stylesheet" href="Estilos/style.css"><!--Se vincula las hojas de estilos con el index.html-->
+    <script src="script.js"></script><!--Se vincula el documento js con el index.html-->
 </head>
-<body>
-<header id="Inicio">
+<body><!--Se inicia el cuerpo de la página web-->
+<header id="Inicio"><!--Se crea el encabezado principal y se le agrega un id para identificarlo en la barra de navegación-->
     <h1> Business Sky</h1>
     <p> Una idea que emerge como una estrella y brilla como una.</p>
-    <div>
+    <div><!--Se crea un contenedor div para agregar el botón que se encargará de cambiar entre un modo oscuro y uno claro-->
         <button type="button" id="boton_Tema" class="botonTema" aria-pressed="false">
             Modo oscuro
         </button>
     </div>
-    <nav>
-        <ul>
+    <nav><!--Se crea la barra de navegación vinculada con los id en la página para navegar entre ellas-->
+        <ul><!--Se crea la lista desordenada donde estarán las diferentes secciones de la página web, con el fin de navegar entre ellas-->
             <li> <a href="#Inicio"> Inicio</a></li>
             <li> <a href="#Publicaciones"> Publicaciones </a></li>
             <li> <a href="#CrearPublicacion"> Crear publicación </a></li>
@@ -26,9 +26,65 @@
         </ul>
     </nav>
 </header>
-<main>
-    <section id="Publicaciones">
-
+<main><!--Inicia el contenido principal de la página web -->
+    <hr>
+    <section id="Publicaciones"><!--Se crea la sección donde irán las publicaciones-->
+        <article class="publicacion"><!--Se crea un artículo, junto a la clase de "publicacion", para comenzar las publicaciones en una misma clase-->
+            <div class="cabecera-pub"><!--Se crea el contenedor div con la clase de "cabecera-pub", para iniciar lo que irá dentro de la cabecera-->
+                <span class="nombre-usuario"> Oliver Queen</span><!--Se crea el span para guardar dentro de él una clase que identificará el nombre del usuario-->
+                <span class="nombre-negocio"> Queen Industries</span><!-- Se crea el span con la clase "nombre-negocio", para darle un nombre al negocio-->
+                <span class="categoria"> tecnología</span><!--Se crea el span para definir la categoría que llevará la publicación-->
+            </div>
+            <div class="contenido-pub"><!--Se crea el div y la clase para mostrar el contendido de la publicación -->
+                <p> Con nosotros tus necesidades estás resueltas. <br> Porqué Contamos con una gran variedad de electrodomésticos, dispositivos electrónicos, computadoras y dempas que se ajustan a tus necesidades. </p><!--Se muestra el contenido de que trata el negocio.-->
+            </div>
+            <div class="pie-pub"><!--Se crea el pie de la publicación que se mostrará al final-->
+                <span>❤️ Me gusta: <span id="likes-3">5.400</span></span><!--Se crea un span para los me gusta y su respectiva canatidad con el id.-->
+            </div>
+        </article>
+        <hr>
+        <article class="publicacion">
+            <div class="cabecera-pub">
+                <span class="nombre-usuario"> Mónica Retana</span>
+                 <span class="nombre-negocio"> Kairos Desing </span>
+                <span class="categoria"> Personalización de artículos </span>
+            </div>
+            <div class="contenido-pub">
+                <p> Es un emprendimiento especializado en la personalizacón de articulos, tienes una idea nosotros la hacemos realidad, desde camisas, tazas, gorras entre muchos más.</p>
+            </div>
+            <div class="pie-pub">
+                <span>❤️ Me gusta: <span id="likes-3">7.000</span></span>
+            </div>
+        </article>
+        <hr>
+        <article class="publicacion">
+            <div class="cabecera-pub">
+                <span class="nombre-usuario"> Anny Álfaro</span>
+                 <span class="nombre-negocio"> Eternal Garden </span>
+                <span class="categoria"> Artesanías </span>
+            </div>
+            <div class="contenido-pub">
+                <p> Vendemos experiencias que duran por la propia eternidad.<br> Con bellas flores de tela y limpiapipas personalizadas a su gusto. </p>
+            </div>
+            <div class="pie-pub">
+                <span>❤️ Me gusta: <span id="likes-3">7.700</span></span>
+            </div>
+        </article>
+        <hr>
+                <article class="publicacion">
+            <div class="cabecera-pub">
+                <span class="nombre-usuario"> Donny Obando </span>
+                 <span class="nombre-negocio"> Your destiny is in your hands </span>
+                <span class="categoria"> Couch en desarrollo personal </span>
+            </div>
+            <div class="contenido-pub">
+                <p> El poder de pensar y crear tu propio futuro no es suerte, se sueña y se actua ,tu decides a donde quieres llegar en tu vida. </p>
+            </div>
+            <div class="pie-pub">
+                <span>❤️ Me gusta: <span id="likes-3">1.000.000</span></span>
+            </div>
+        </article>
+        <hr>
     </section>
     <section id="CrearPublicacion">
 

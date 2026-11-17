@@ -110,12 +110,23 @@
             <option value="Educación">
             <option value="Transporte">
             </datalist></p>
-            <p> <label for="contenido_publicacion"> Contenido: <textarea id="contenido_publicacion" placeholder="Somos una empresa filantrópica enfocada en el desarrollo de las ciencias y las tecnologías por el bien global."></textarea></label></p>
-            <button type="submit" class="boton_principal"> Enviar</button>
+            <p> <label for="contenido_publicacion"> Contenido: <textarea id="contenido_publicacion" placeholder="Somos una empresa filantrópica enfocada en el desarrollo de las ciencias y las tecnologías por el bien global."></textarea></label></p><!--Se da la etiqueta para mostrar el contenido de la textarea-->
+            <button type="submit" class="boton_principal"> Enviar</button><!--Se da el botón para subir el contenido-->
         </form>
     </section>
-    <section id="Perfil">
-
+    <section id="Perfil"><!--Se inicia la sección que mostrará el perfil del usuario-->
+        <h2>Perfil</h2>
+    <div id="perfil" class="Perfil_cabecera">
+        <span><img id="imagen_usuario" src="Imagenes/perfil_prueba.png" alt="Imagen de perfil del usuario" height="100px"></span>
+        <span id="nombre_usuario"><h4>Nombre: <span id="texto_nombre">Jason Todd</span></h4></span>
+        <span id="seguidores_usuario"><p>Seguidores: <span id="num_seguidores">197</span></p></span>
+        <span id="seguidos_usuario"><p>Seguidos: <span id="num_seguidos">188</span></p></span>
+    </div>
+    <div id="contenido_usuario" class="contenido_usuario">
+        <p id="bio_usuario">Soy un joven de 22 años que prospera con su negocio de motos</p>
+        <p id="ubicacion_usuario">Ubicacion: Costa Rica, San Jose, Sabana.</p>
+        <p id="telefono_usuario">Numero de telefono: +506 7777 7777</p>
+        <p id="links_usuario">Links: JasonTud.ig</p>
     </section>
     <section id="Acerca_de"> 
 

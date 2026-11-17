@@ -28,7 +28,9 @@
 </header>
 <main><!--Inicia el contenido principal de la página web -->
     <hr>
+
     <section id="Publicaciones"><!--Se crea la sección donde irán las publicaciones-->
+        <!--Se muestra el primer comentario-->
         <article class="publicacion"><!--Se crea un artículo, junto a la clase de "publicacion", para comenzar las publicaciones en una misma clase-->
             <div class="cabecera-pub"><!--Se crea el contenedor div con la clase de "cabecera-pub", para iniciar lo que irá dentro de la cabecera-->
                 <span class="nombre-usuario"> Oliver Queen</span><!--Se crea el span para guardar dentro de él una clase que identificará el nombre del usuario-->
@@ -43,6 +45,7 @@
             </div>
         </article>
         <hr>
+        <!--Se muestra el segundo comentario-->
         <article class="publicacion">
             <div class="cabecera-pub">
                 <span class="nombre-usuario"> Mónica Retana</span>
@@ -57,6 +60,7 @@
             </div>
         </article>
         <hr>
+        <!--Se muestra el tercer comentario-->
         <article class="publicacion">
             <div class="cabecera-pub">
                 <span class="nombre-usuario"> Anny Álfaro</span>
@@ -71,6 +75,7 @@
             </div>
         </article>
         <hr>
+        <!--Se muestra el cuarto comentario-->
                 <article class="publicacion">
             <div class="cabecera-pub">
                 <span class="nombre-usuario"> Donny Obando </span>
@@ -86,8 +91,28 @@
         </article>
         <hr>
     </section>
-    <section id="CrearPublicacion">
+    <section id="CrearPublicacion"><!--inicia la sección para crear publicaciones-->
+        <h2> Crear publicación</h2><!--Muestra un encabezado que inicia la sección para crear una publicación-->
+        <p> ¿Tienes algún emprendimiento que te gustaría compartir? Aquí encontrarás la perfecta ocasión para mostrarlo al mundo.</p>
+        <form id="Formulario_Publicacion" class="Formulario"><!--Inicia el formulario con su respectiva id y clase-->
+            <p><label for="nombre"> Nombre: <input type="text" id="nombre" placeholder="Ej: Yariela Fallas Piña" required> </label></p><!--Es la etiqueta que pide al usuario ingresar su nombre-->
+             <p><label for="nombre_negocio"> Negocio: <input type="text" id="nombre_negocio" placeholder="Ej: Wayne Industries"> </label></p><!--Muestra un espacio para ingresar el nombre del emprendimiento-->
 
+             <p><label for="categoria">Categoría:</label><!--Muestra una etiqueta que deja seleccionar opciones prederterminadas u escribir la categoría a la que pertenece.-->
+            <input list="lista-categorias" id="categoria" name="Categoria" placeholder="Selecciona o escribe una categoría..."><!--Permite conectar con la lista con el id y muestra información de la etiqueta-->
+            <datalist id="lista-categorias"><!--Comienza la lista predeterminada con sus respectivas opciones-->
+            <option value="Tecnología">
+            <option value="Personalización de artículos">
+            <option value="Artesanías">
+            <option value="Couch en desarrollo personal">
+            <option value="Gastronomía">
+            <option value="Salud">
+            <option value="Educación">
+            <option value="Transporte">
+            </datalist></p>
+            <p> <label for="contenido_publicacion"> Contenido: <textarea id="contenido_publicacion" placeholder="Somos una empresa filantrópica enfocada en el desarrollo de las ciencias y las tecnologías por el bien global."></textarea></label></p>
+            <button type="submit" class="boton_principal"> Enviar</button>
+        </form>
     </section>
     <section id="Perfil">
 

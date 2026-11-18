@@ -30,7 +30,7 @@
 <main><!--Inicia el contenido principal de la página web -->
     <section id="Autenticacion" class="autenticacion"><!--Se crea una sección para crear una cuenta y registrarse-->
         <div class="autenticacion_card"><!--Se abre un div que tendrá el formulario de registro-->
-            <h2> Crear cuenta </h2><!--Se le muestra al usuario que aquí realizará una cuenta-->
+            <h2 id="encabezado_CrearCuenta"> Crear cuenta </h2><!--Se le muestra al usuario que aquí realizará una cuenta-->
             <form id="registro"><!--Inicia el formulario-->
                 <p> <label for="registro_nombre"> Nombre completo: <input type="text" id="registro_nombre" required placeholder="Ej: Reed Richards"> </label></p><!--Es el campo que solicita el nombre-->
                 <p> <label for="registro_negocio"> Nombre del negocio: <input type="text" id="registro_negocio" required placeholder="Fundación Baxter"> </label></p><!--Es el campo que solicita el nombre del negocio-->
@@ -52,7 +52,7 @@
         </div><!--Finaliza el formulario de registro en el div-->
 
         <div class="autenticacion-card"><!--Inicia el div que llevará el formulario de iniciar sesión-->
-            <h2>Iniciar Sesión</h2><!--Se muestra al usuario que aquí es el formulario donde se iniciará sesión-->
+            <h2 id="encabezado_IniciarSesion">Iniciar Sesión</h2><!--Se muestra al usuario que aquí es el formulario donde se iniciará sesión-->
             <form id="formulario_login"><!--Inicia el formulario-->
                 <p><label for="login_correo">Correo electrónico: <input type="email" id="login_correo" required placeholder="reed.richards4@gmail.com"></label></p><!--Se da lugar para escribir el correo electrónico-->
                 <p><label for="login_password">Contraseña: <input type="password" id="login_password" required placeholder="********"></label></p><!--Se da el lugar para escribir la contraseña-->

@@ -1,5 +1,5 @@
 /* Hojas de estilos*/
-:root{
+:root{/*Define los colores que usará el sitio mediante var*/
     --xiketic: #0F1019;           /* El fondo principal de la página ultra oscuro */
     --space-cadet-dark: #1B1E33;  /* Los contenedores y las secciones profundas */
     --space-cadet: #242944;       /* Los botones y los elementos destacados */
@@ -13,8 +13,13 @@
     --color-acento: var(--purple-navy);
     --color-borde: var(--purple-navy);
     --color-claro: var(--dark-blue-gray);
+    /*Colores del botón del tema de la página*/
+    --gris-claro-btn: #E2E8F0;    /* El fondo del botón en Modo Claro */
+    --gris-texto-btn: #1A202C;    /* El texto del botón en Modo Claro */
+    --amarillo-estrella: #FFD700; /* Un amarillo brillante para el Modo Oscuro ✨ */
+    --amarillo-hover: #FFC700;    /* Un amarillo al pasar el mouse por encima */
 }
-body{
+body{/*Define para todo el cuerpo una familia de letra, un color de fondo, un color principal y le da su respectivo margin, padding y define la altura de la línea*/
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--color-fondo);
     color: var(--color-principal);
@@ -22,8 +27,8 @@ body{
     padding: 0;
     line-height: 1.5;
 }
-/*Diseño del encabezado y de la barra de navegación*/
-header{
+/*Es el diseño del encabezado y de la barra de navegación*/
+header{/*Es el encabezado, que muestra su color de fondo, color de texto, alineación del mismo, el padding, efecto de sombra y un borde inferior*/
     background: linear-gradient(135deg, var(--space-cadet-dark), var(--space-cadet));
     color: var(--texto-claro);
     text-align: center;
@@ -31,22 +36,22 @@ header{
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     border-bottom: 2px solid var(--purple-navy);
 }
-header h1{
+header h1{/*Es el h1 del header que se le dará un margen, un tamaño d eletra, un color de letra y una sombra*/
     margin: 0;
     font-size: 2.5rem;
     color: var(--texto-claro);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
-nav ul{
-    list-style: none;
-    padding: 0;
-    margin: 20px 0 0 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+nav ul{/*Es la lista desordenada de la barra de navegación*/
+    list-style: none;/*Se le quita el estilo de la lista*/
+    padding: 0;/*Se le da un padding específico*/
+    margin: 20px 0 0 0;/*Se le da un margen específico*/
+    display: flex;/*Se pone en modo flexbox*/
+    justify-content: center;/*Centra el contenido*/
+    flex-wrap: wrap;/*Permite bajar a otra línea si los elementos superan el ancho del contenedor*/
+    gap: 15px;/*Crea un espacio de separación entre elementos hijos*/
 }
-nav ul li a{
+nav ul li a{/*contenido de la lista desordenada y sus enlaces internos; con sus características especiales*/
     color: var(--texto-claro);
     text-decoration: none;
     font-weight: bold;
@@ -56,19 +61,17 @@ nav ul li a{
     border: 1px solid var(--purple-navy);
     transition: all 0.3s ease;
 }
-nav ul li a:hover{
+nav ul li a:hover{/*Muestra lo que pasará al poner el mouse sobre él*/
     background-color: var(--purple-navy);
     color: var(--texto-claro);
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(67, 71, 104, 0.4);
 }
-.contenedor-boton-tema {
-    margin: 15px 0;
-}
-.botonTema {
-    background-color: #E2E8F0; /* Gris claro moderno */
-    color: #1A202C;           /* Texto oscuro para contraste */
-    border: 1px solid #CBD5E0;
+/*Este será el estilo cuándo sea el modo claro*/
+.botonTema {/*Es el estilo del boton en modo claro*/
+    background-color: var(--gris-claro-btn);
+    color: var(--gris-texto-btn);
+    border: 1px solid var(--purple-navy);
     padding: 10px 20px;
     font-size: 0.95rem;
     font-weight: bold;
@@ -77,21 +80,96 @@ nav ul li a:hover{
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-.botonTema:hover {
-    background-color: #CBD5E0;
+.botonTema:hover {/*Es como se verá el botón tras pasar el mouse sobre él*/
+    background-color: var(--dark-blue-gray);
+    color: var(--texto-claro);
     transform: scale(1.05);
 }
-body.dark-mode .botonTema, 
-.botonTema.modo-oscuro-activo {
-    background-color: #FFD700; /* Amarillo estrella brillante */
-    color: #0F1019;           /* Texto oscuro intenso para legibilidad */
-    border: 1px solid #FFA500;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Efecto de brillo estelar */
+/* Este será el estilo cuándo sea el modo oscuro */
+body.dark-mode .botonTema, /*Es la variante del modo claro*/
+.botonTema.modo-oscuro-activo { /*Es el estilo del botón cuándo este en el modo oscuro*/
+    background-color: var(--amarillo-estrella); /* Un amarillo estrella brillante */
+    color: var(--xiketic);                    /* Muestra un texto oscuro intenso para ser visible */
+    border: 1px solid var(--amarillo-hover);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Da un efecto de brillo estelar */
+}
+body.dark-mode .botonTema:hover,/*Muestra que está efectúandose en él tema oscuro, en un hover*/
+.botonTema.modo-oscuro-activo:hover {/*Muestra el estilo que tomará al pasar el mouse sobre él*/
+    background-color: var(--amarillo-hover);/*Muestra el color de fondo que tomará al pasarse sobre él*/
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);/*Se le da una sombra*/
+}
+/*Encabezados de los formularios*/
+#encabezado_CrearCuenta{/*Muestra el h2 de Crear cuenta*/
+   color: var(--gris-claro-btn);/*Le brinda un color a las letras*/
+    letter-spacing: 1.5px;/*Le da un espaciado específico*/
+    text-align: center;/*Centra el texto*/
+}
+#encabezado_IniciarSesion{/*Muestra el h2 de Iniciar sesión*/
+   color: var(--gris-claro-btn);/*Le brinda un color a las letras*/
+    letter-spacing: 1.5px;/*Le da un espaciado específico*/
+    text-align: center;/*Centra el texto*/
+}
+/*Formularios*/
+section form {/*Especifica como debe de ser la sección de formulario*/
+    background-color: var(--space-cadet-dark);
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--purple-navy);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
-body.dark-mode .botonTema:hover,
-.botonTema.modo-oscuro-activo:hover {
-    background-color: #FFC700;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+form label {/*Especifica como se mostrará la etiqueta del formulario*/
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--texto-claro);
+}/*Muestra los distintos input con su tipo respectivo y si van estilizados*/
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="tel"],
+form input[type="url"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: var(--xiketic);
+    color: var(--texto-claro);
+    border: 1px solid var(--purple-navy);
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}/*Muestra la activación de un elemento interactivo cuando el usuario interactúa con ellos*/
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--dark-blue-gray);
+    box-shadow: 0 0 5px rgba(108, 114, 150, 0.5);
+}
+form textarea {/*Se le dan los artibutos al form que contiene textarea*/
+    resize: vertical;
+    min-height: 100px;
+}
+/* Los bootones principales y los de envío */
+.boton_principal, button[type="submit"] {
+    background-color: var(--space-cadet);
+    color: var(--texto-claro);
+    border: 1px solid var(--purple-navy);
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    display: block;
+    width: 100%;
+}
+.boton_principal:hover, button[type="submit"]:hover {/*Muestra como cambiará el botón cuándo se le pasa el mouse por encima*/
+    background-color: var(--purple-navy);
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(67, 71, 104, 0.5);
 }

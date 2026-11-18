@@ -338,6 +338,47 @@ a.llamado-accion {/*Se llama al enlace interno en la clase*/
 a.llamado-accion:hover {/*Se dará un atributo que cambiará el enlace cuando un mouse pase sobre él*/
     background-color: var(--purple-navy);/*Cambia de color el fondo*/
 }
+/*Diseño del pie de página*/
+.final_pagina {/*Es el que contiene toda la infromación dentro del pie de página*/
+    background-color: var(--space-cadet-dark);/*Color del fondo*/
+    color: var(--texto-claro);/*Color de letra*/
+    padding: 40px 20px 20px 20px;/*Espacio interior*/
+    margin-top: 60px;/*Deja un margen exterior*/
+    border-top: 2px solid var(--purple-navy);/*Hace una línea en el borde superior*/
+}
+.final_contenido {/*Es la estructura interna del pie de página*/
+    max-width: 900px;/*Limita el ancho del contenido*/
+    margin: 0 auto;/*Centra el bloque horizontal*/
+    display: grid;/*Escoge la estructura de grid*/
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));/*Crea columnas automáticas y responsivas*/
+    gap: 30px;/*Deja una separación entre los elemnetos*/
+    margin-bottom: 30px;/*Deja un margen inferior*/
+}
+.seccion_final h3, .final_contenido h3 {/*En la sección final y el contenido definimos ciertos atributos del encabezado h3*/
+    color: var(--texto-claro);/*Se le da un color de letra*/
+    margin-top: 0;/*Elimina el margen superior*/
+    margin-bottom: 15px;/*Deja un margen en la parte baja*/
+}
+.seccion_final p, .final_contenido p {/*En la sección final y el contenido definimos ciertos atributos del párrafo*/
+    color: var(--dark-blue-gray);/*El color de letra*/
+    font-size: 0.95rem;/*El tamaño de letra*/
+}
+.final_contenido a {/*Trata los atributos de los enlances en dicha sección*/
+    color: var(--texto-claro);/*Color de la letra*/
+    text-decoration: none;/*Le quita el subrayado*/
+    transition: color 0.3s ease;/*Le deja una animación para cambiar el color gradualmente*/
+}
+.final_contenido a:hover {/*Muestra los atributos que se mostrarán al pasar el mouse sobre él enlace*/
+    color: var(--dark-blue-gray);/*El color de letra*/
+    text-decoration: underline;/*Activa el subrayado si pasa el mouse*/
+}
+.creditos_finales {/*Muestra la última parte, donde s emuestra el año y la empresa en lo final del footer*/
+    text-align: center;/*Alínea el texto al centro*/
+    border-top: 1px solid var(--purple-navy);/*Agrega un borde arriba*/
+    padding-top: 20px;/*Agrega un espacio interior*/
+    font-size: 0.85rem;/*Agrega un tamaño de letra predeterminado*/
+    color: var(--dark-blue-gray);/*Le da un color de letra*/
+}
 /*Diseño responsivo*/
 @media (max-width: 768px) {/*Cambia los estilos dentro del contenedor cuando la pantalla mide una cantidad específica de ancho o menos*/
     nav ul {/*Trata con el menú de navegación*/

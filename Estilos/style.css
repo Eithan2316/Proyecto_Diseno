@@ -173,3 +173,44 @@ form textarea {/*Se le dan los artibutos al form que contiene textarea*/
     transform: scale(1.02);
     box-shadow: 0 4px 12px rgba(67, 71, 104, 0.5);
 }
+/*Publicaciones*/
+#Publicaciones {/*Se le dan ciertos atributos a la sección que contiene a las publicaciones*/
+    max-width: 800px;/*Establece un ancho máximo por contenedor*/
+    margin: 40px auto;/*Establece un control de los márgenes exteriores*/
+    padding: 0 20px;/*Establece el control del relleno interior*/
+}
+.publicacion {/*Abre la clase de publicación para añadirle a un atributo que se repita en todas las de la misma clase*/
+    background-color: var(--space-cadet-dark);
+    border: 1px solid var(--purple-navy);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.publicacion:hover {/*Muestra lo que saldrá al pasar el mouse en él*/
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(67, 71, 104, 0.3);
+    border-color: var(--dark-blue-gray);
+}
+.cabecera-pub {/*Se define el estilo que tendrá la cabecera de cada publicación*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--purple-navy);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: var(--dark-blue-gray);
+}
+/*Encabezado y parrafo de crear publicación acomodados a las necesidades*/
+#CrearPublicacion h2{/*Le brinda ciertos atrbutos al encabezado de crear publicación*/
+     color: var(--gris-claro-btn);/*Le brinda un color a las letras*/
+    letter-spacing: 1.5px;/*Le da un espaciado específico*/
+    text-align: center;/*Centra el texto*/
+}
+#Contenido_CrearPublicacion{/*Le da unos atributos específicos al texto que le sigue al encabezado*/
+   color: var(--gris-claro-btn);/*Le brinda un color a las letras*/
+    letter-spacing: 1.5px;/*Le da un espaciado específico*/
+    text-align: center;/*Centra el texto*/   
+}

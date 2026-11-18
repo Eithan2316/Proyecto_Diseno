@@ -1,0 +1,97 @@
+/* Hojas de estilos*/
+:root{
+    --xiketic: #0F1019;           /* El fondo principal de la página ultra oscuro */
+    --space-cadet-dark: #1B1E33;  /* Los contenedores y las secciones profundas */
+    --space-cadet: #242944;       /* Los botones y los elementos destacados */
+    --purple-navy: #434768;       /* Las tarjetas, bordes y los acentos */
+    --dark-blue-gray: #6C7296;    /* Textos secundarios y pequeños detalles */
+    --texto-claro: #F0F2FA;       /* El texto general para dar un alto contraste con el fondo*/
+    /* Las variables que serán funcionales dentro del sitio */
+    --color-fondo: var(--xiketic);
+    --color-principal: var(--texto-claro);
+    --color-secundario: var(--space-cadet);
+    --color-acento: var(--purple-navy);
+    --color-borde: var(--purple-navy);
+    --color-claro: var(--dark-blue-gray);
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-principal);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+/*Diseño del encabezado y de la barra de navegación*/
+header{
+    background: linear-gradient(135deg, var(--space-cadet-dark), var(--space-cadet));
+    color: var(--texto-claro);
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid var(--purple-navy);
+}
+header h1{
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--texto-claro);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+nav ul li a{
+    color: var(--texto-claro);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: var(--space-cadet-dark);
+    border: 1px solid var(--purple-navy);
+    transition: all 0.3s ease;
+}
+nav ul li a:hover{
+    background-color: var(--purple-navy);
+    color: var(--texto-claro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(67, 71, 104, 0.4);
+}
+.contenedor-boton-tema {
+    margin: 15px 0;
+}
+.botonTema {
+    background-color: #E2E8F0; /* Gris claro moderno */
+    color: #1A202C;           /* Texto oscuro para contraste */
+    border: 1px solid #CBD5E0;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.botonTema:hover {
+    background-color: #CBD5E0;
+    transform: scale(1.05);
+}
+body.dark-mode .botonTema, 
+.botonTema.modo-oscuro-activo {
+    background-color: #FFD700; /* Amarillo estrella brillante */
+    color: #0F1019;           /* Texto oscuro intenso para legibilidad */
+    border: 1px solid #FFA500;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Efecto de brillo estelar */
+}
+
+body.dark-mode .botonTema:hover,
+.botonTema.modo-oscuro-activo:hover {
+    background-color: #FFC700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+}

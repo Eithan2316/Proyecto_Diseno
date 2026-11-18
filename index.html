@@ -111,26 +111,56 @@
             <option value="Transporte">
             </datalist></p>
             <p> <label for="contenido_publicacion"> Contenido: <textarea id="contenido_publicacion" placeholder="Somos una empresa filantrópica enfocada en el desarrollo de las ciencias y las tecnologías por el bien global."></textarea></label></p><!--Se da la etiqueta para mostrar el contenido de la textarea-->
-            <button type="submit" class="boton_principal"> Enviar</button><!--Se da el botón para subir el contenido-->
+             <button type="submit" class="boton_principal"> Enviar</button><!--Se da el botón para subir el contenido-->
         </form>
     </section>
     <section id="Perfil"><!--Se inicia la sección que mostrará el perfil del usuario-->
-        <h2>Perfil</h2>
-    <div id="perfil" class="Perfil_cabecera">
+        <h2>Perfil</h2><!--Se muestra un texto introductorio que muestra el perfil de prueba-->
+    <div id="perfil" class="Perfil_cabecera"><!--Se abre un div que desarrollará la cabecera del perfil-->
         <span><img id="imagen_usuario" src="Imagenes/perfil_prueba.png" alt="Imagen de perfil del usuario" height="100px"></span>
         <span id="nombre_usuario"><h4>Nombre: <span id="texto_nombre">Jason Todd</span></h4></span>
         <span id="seguidores_usuario"><p>Seguidores: <span id="num_seguidores">197</span></p></span>
         <span id="seguidos_usuario"><p>Seguidos: <span id="num_seguidos">188</span></p></span>
     </div>
-    <div id="contenido_usuario" class="contenido_usuario">
+    <div id="contenido_usuario" class="contenido_usuario"><!--Se abre un div que manejará el contenido del perfil-->
         <p id="bio_usuario">Soy un joven de 22 años que prospera con su negocio de motos</p>
         <p id="ubicacion_usuario">Ubicacion: Costa Rica, San Jose, Sabana.</p>
         <p id="telefono_usuario">Numero de telefono: +506 7777 7777</p>
         <p id="links_usuario">Links: JasonTud.ig</p>
     </section>
-    <section id="Acerca_de"> 
-
-    </section>
+    <section id="Acerca_de"><!--Se abre la sección que mostrará información al respecto del sitio web-->
+  <div class="acerca-header"><!--Se inicia un div para introducir los puntos que tocan la información de la empresa-->
+        <h2>Información sobre nuestra empresa</h2>
+        <p class="subtitulo-acerca">Conoce el propósito, la visión y los valores detrás de Business Sky.</p>
+    </div>
+    <div class="acerca-grid"><!--Se abre un div para mostrar la información separada por <article>-->
+        <article class="acerca-card"><!--Se abre un article que lleva escrita la misión de la empresa, junto a la clase que recopilará dicha información-->
+            <h3>Misión</h3>
+            <p>Business Sky nació para ser un medio que conecte a nuevas ideas que quieren emerger al mundo y brillar en él. Siendo un lugar donde cualquiera con una idea pueda prosperar y mostrarla al mundo.</p>
+        </article>
+        <article class="acerca-card"><!--Se abre un article que lleva escrita la visión de la empresa-->
+            <h3>Visión</h3>
+            <p>Convertirnos en una comunidad digital que sirva como un hogar para las grandes ideas, donde puedan crecer e impulsar sus actividades con facilidad para la colaboración comunitaria y el comercio local.</p>
+        </article>
+        <article class="acerca-card"><!--Se abre un article que mostrará la historia de la empresa-->
+            <h3>Historia</h3>
+            <p>Somos un proyecto que busca convertirse en un medio de alcance global para los emprendimientos actuales, impulsando el conocimiento sobre nuevas ideas que amplíen los horizontes para su desarrollo.</p>
+        </article>
+    </div>
+    <div class="valores-container"><!--Se abre un div que llevará mediante una lista desordenada los valores de la empresa-->
+        <h3>Valores de nuestra comunidad</h3>
+        <ul class="valores-lista">
+            <li><strong>Comunidad y Colaboración:</strong> Crecer juntos apoyando el talento propio y de otros.</li>
+            <li><strong>Visibilidad Accesible:</strong> Que cualquier emprendimiento, sin importar su tamaño, tenga voz.</li>
+            <li><strong>Innovación y Esfuerzo:</strong> Reconocer el valor detrás de cada negocio creado desde cero.</li>
+        </ul>
+    </div>
+    <div class="llamado-accion"><!--Se abre un div con un llamado a la acción que motivará al usuario y brindará cconfianza -->
+        <h3>¿Tienes un emprendimiento?</h3>
+        <p>Súmate a nuestra comunidad donde cada idea se convertirá en una resplandeciente estrella en el universo de la innovación.</p>
+        <a href="#CrearPublicacion" class="llamado-accion">Crea tu publicación hoy</a>
+    </div>
+</section>
 </main>
 </body>
 </html>

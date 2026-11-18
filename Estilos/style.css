@@ -6,19 +6,32 @@
     --purple-navy: #434768;       /* Las tarjetas, bordes y los acentos */
     --dark-blue-gray: #6C7296;    /* Textos secundarios y pequeños detalles */
     --texto-claro: #F0F2FA;       /* El texto general para dar un alto contraste con el fondo*/
-    /* Las variables que serán funcionales dentro del sitio */
+    
+    /* Las variables que serán funcionales dentro del sitio (Modo Oscuro por defecto) */
     --color-fondo: var(--xiketic);
     --color-principal: var(--texto-claro);
     --color-secundario: var(--space-cadet);
     --color-acento: var(--purple-navy);
     --color-borde: var(--purple-navy);
     --color-claro: var(--dark-blue-gray);
+    
     /*Colores del botón del tema de la página*/
     --gris-claro-btn: #E2E8F0;    /* El fondo del botón en Modo Claro */
     --gris-texto-btn: #1A202C;    /* El texto del botón en Modo Claro */
     --amarillo-estrella: #FFD700; /* Un amarillo brillante para el Modo Oscuro ✨ */
     --amarillo-hover: #FFC700;    /* Un amarillo al pasar el mouse por encima */
 }
+
+/* MODO CLARO (Se activa dinámicamente cuando el body NO tiene la clase 'dark-mode') */
+body:not(.dark-mode) {
+    --color-fondo: #F8FAFC;       /* Fondo claro limpio y visible */
+    --color-principal: #1E293B;   /* Texto oscuro de alta visibilidad para modo claro */
+    --space-cadet-dark: #E2E8F0;  /* Contenedores claros */
+    --space-cadet: #CBD5E1;
+    --purple-navy: #94A3B8;
+    --dark-blue-gray: #334155;    /* Texto secundario de alta visibilidad en modo claro */
+}
+
 body{/*Define para todo el cuerpo una familia de letra, un color de fondo, un color principal y le da su respectivo margin, padding y define la altura de la línea*/
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--color-fondo);
@@ -26,11 +39,12 @@ body{/*Define para todo el cuerpo una familia de letra, un color de fondo, un co
     margin: 0;
     padding: 0;
     line-height: 1.5;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición fluida al cambiar de modo */
 }
 /*Es el diseño del encabezado y de la barra de navegación*/
 header{/*Es el encabezado, que muestra su color de fondo, color de texto, alineación del mismo, el padding, efecto de sombra y un borde inferior*/
     background: linear-gradient(135deg, var(--space-cadet-dark), var(--space-cadet));
-    color: var(--texto-claro);
+    color: var(--color-principal);
     text-align: center;
     padding: 30px 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
@@ -39,7 +53,7 @@ header{/*Es el encabezado, que muestra su color de fondo, color de texto, alinea
 header h1{/*Es el h1 del header que se le dará un margen, un tamaño d eletra, un color de letra y una sombra*/
     margin: 0;
     font-size: 2.5rem;
-    color: var(--texto-claro);
+    color: var(--color-principal);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 nav ul{/*Es la lista desordenada de la barra de navegación*/
@@ -52,7 +66,7 @@ nav ul{/*Es la lista desordenada de la barra de navegación*/
     gap: 15px;/*Crea un espacio de separación entre elementos hijos*/
 }
 nav ul li a{/*contenido de la lista desordenada y sus enlaces internos; con sus características especiales*/
-    color: var(--texto-claro);
+    color: var(--color-principal);
     text-decoration: none;
     font-weight: bold;
     padding: 8px 16px;
@@ -63,7 +77,7 @@ nav ul li a{/*contenido de la lista desordenada y sus enlaces internos; con sus 
 }
 nav ul li a:hover{/*Muestra lo que pasará al poner el mouse sobre él*/
     background-color: var(--purple-navy);
-    color: var(--texto-claro);
+    color: var(--color-principal);
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(67, 71, 104, 0.4);
 }
@@ -100,12 +114,12 @@ body.dark-mode .botonTema:hover,/*Muestra que está efectúandose en él tema os
 }
 /*Encabezados de los formularios*/
 #encabezado_CrearCuenta{/*Muestra el h2 de Crear cuenta*/
-   color: var(--gris-claro-btn);/*Le brinda un color a las letras*/
+   color: var(--color-principal);/*Le brinda un color a las letras*/
     letter-spacing: 1.5px;/*Le da un espaciado específico*/
     text-align: center;/*Centra el texto*/
 }
 #encabezado_IniciarSesion{/*Muestra el h2 de Iniciar sesión*/
-   color: var(--gris-claro-btn);/*Le brinda un color a las letras*/
+   color: var(--color-principal);/*Le brinda un color a las letras*/
     letter-spacing: 1.5px;/*Le da un espaciado específico*/
     text-align: center;/*Centra el texto*/
 }
@@ -124,7 +138,7 @@ form label {/*Especifica como se mostrará la etiqueta del formulario*/
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
-    color: var(--texto-claro);
+    color: var(--color-principal);
 }/*Muestra los distintos input con su tipo respectivo y si van estilizados*/
 form input[type="text"],
 form input[type="email"],
@@ -136,8 +150,8 @@ form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    background-color: var(--xiketic);
-    color: var(--texto-claro);
+    background-color: var(--color-fondo);
+    color: var(--color-principal);
     border: 1px solid var(--purple-navy);
     border-radius: 6px;
     font-size: 1rem;
@@ -178,6 +192,7 @@ form textarea {/*Se le dan los artibutos al form que contiene textarea*/
     max-width: 800px;/*Establece un ancho máximo por contenedor*/
     margin: 40px auto;/*Establece un control de los márgenes exteriores*/
     padding: 0 20px;/*Establece el control del relleno interior*/
+    color: var(--color-principal); /* Asegura visibilidad de textos generales aquí */
 }
 .publicacion {/*Abre la clase de publicación para añadirle a un atributo que se repita en todas las de la misma clase*/
     background-color: var(--space-cadet-dark);
@@ -187,6 +202,7 @@ form textarea {/*Se le dan los artibutos al form que contiene textarea*/
     margin-bottom: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--color-principal);
 }
 .publicacion:hover {/*Muestra lo que saldrá al pasar el mouse en él*/
     transform: translateY(-4px);
@@ -201,16 +217,16 @@ form textarea {/*Se le dan los artibutos al form que contiene textarea*/
     padding-bottom: 10px;
     margin-bottom: 15px;
     font-size: 0.9rem;
-    color: var(--dark-blue-gray);
+    color: var(--color-principal); /* Cambiado para que sea totalmente legible */
 }
 /*Encabezado y parrafo de crear publicación acomodados a las necesidades*/
 #CrearPublicacion h2{/*Le brinda ciertos atrbutos al encabezado de crear publicación*/
-     color: var(--gris-claro-btn);/*Le brinda un color a las letras*/
+     color: var(--color-principal);/*Le brinda un color a las letras*/
     letter-spacing: 1.5px;/*Le da un espaciado específico*/
     text-align: center;/*Centra el texto*/
 }
 #Contenido_CrearPublicacion{/*Le da unos atributos específicos al texto que le sigue al encabezado*/
-   color: var(--gris-claro-btn);/*Le brinda un color a las letras*/
+   color: var(--dark-blue-gray);/*Le brinda un color a las letras*/
     letter-spacing: 1.5px;/*Le da un espaciado específico*/
     text-align: center;/*Centra el texto*/   
 }
@@ -223,6 +239,7 @@ form textarea {/*Se le dan los artibutos al form que contiene textarea*/
     border-radius: 12px;
     border: 1px solid var(--purple-navy);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    color: var(--color-principal);
 }
 .Perfil_cabecera {/*Se muestra una clase que guarda atributos que irán a la cabecera del perfil*/
     display: flex;
@@ -240,7 +257,7 @@ form textarea {/*Se le dan los artibutos al form que contiene textarea*/
 }
 .contenido_usuario p {/*Se da un margen y color de letra al contenido del perfil guardado en la clase*/
     margin: 10px 0;
-    color: var(--dark-blue-gray);
+    color: var(--color-principal);
 }
 /*Diseño de Acerca de, que es la información de la empresa*/
 #Acerca_de {/*Nos ponemos en la seccion para limitar su ancho, separar arriba y abajo con el margen; además de dar un espacio interno a los lados*/
@@ -253,7 +270,7 @@ form textarea {/*Se le dan los artibutos al form que contiene textarea*/
     margin-bottom: 30px;
 }
 .acerca-header h2 {/*Define el color de texto y el tamaño del encabezado h2 con su respectiva sección*/
-    color: var(--texto-claro);
+    color: var(--color-principal);
     font-size: 2rem;
 }
 .subtitulo-acerca {/*Define la clase que contiene un párrafo al que se le agrega el color del texto*/
@@ -272,13 +289,14 @@ form textarea {/*Se le dan los artibutos al form que contiene textarea*/
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
+    color: var(--color-principal);
 }
 .acerca-card:hover {/*Define que pasará al pasar el mouse sobre él. Teniendo una elevación hacía arriba y se cambia el color del borde*/
     transform: translateY(-5px);
     border-color: var(--dark-blue-gray);
 }
 .acerca-card h3 {/*Se agregan ciertos atributos a la clase del encabezado h3. Siendo el color de letra, quita el margen superior, dibuja una línea inferior y añade espacio interior abajo c*/
-    color: var(--texto-claro);
+    color: var(--color-principal);
     margin-top: 0;
     border-bottom: 2px solid var(--purple-navy);
     padding-bottom: 8px;
@@ -292,9 +310,10 @@ form textarea {/*Se le dan los artibutos al form que contiene textarea*/
     border-radius: 10px;/*Se redondea dicho borde*/
     padding: 25px;/*Se deja un margen interior que separa el contenido con un espacio*/
     margin-bottom: 30px;/*Se separa el contenedor hacía abajo*/
+    color: var(--color-principal);
 }
 .valores-container h3 {/*Se toma la clase que lleva el encabezado h3 para darle un color de texto y quitarle su margen arriba*/
-    color: var(--texto-claro);
+    color: var(--color-principal);
     margin-top: 0;
 }
 .valores-lista {/*Se toma la clase de la lista para quitarle su estilo y remueve el relleno izquierdo*/
@@ -306,7 +325,7 @@ form textarea {/*Se le dan los artibutos al form que contiene textarea*/
     color: var(--dark-blue-gray);
 }
 .valores-lista li strong {/*Se le asigna a los li que tienen strong un color respectivo*/
-    color: var(--texto-claro);
+    color: var(--color-principal);
 }
 .llamado-accion {/*Es el contenedor general que lleva los llamados a la acción*/
     background: linear-gradient(135deg, var(--space-cadet-dark), var(--space-cadet));/*Se le da un color de fondo degradado al combinar dos variables*/
@@ -315,9 +334,10 @@ form textarea {/*Se le dan los artibutos al form que contiene textarea*/
     padding: 30px;/*Se agrega un espacio interior*/
     border-radius: 10px;/*Se redondea el borde*/
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);/*Se le asigna una sombra*/
+    color: var(--color-principal);
 }
 .llamado-accion h3 {/*A los encabezados h3 de las clases puestas en el contenedor mayor se le asignan ciertos valores*/
-    color: var(--texto-claro);/*Se da un color de letra*/
+    color: var(--color-principal);/*Se da un color de letra*/
     margin-top: 0;/*Se elimina el margen superior*/
 }
 .llamado-accion p {/*Se llama al párrafo que irá en el cada parte respectiva*/
@@ -341,7 +361,7 @@ a.llamado-accion:hover {/*Se dará un atributo que cambiará el enlace cuando un
 /*Diseño del pie de página*/
 .final_pagina {/*Es el que contiene toda la infromación dentro del pie de página*/
     background-color: var(--space-cadet-dark);/*Color del fondo*/
-    color: var(--texto-claro);/*Color de letra*/
+    color: var(--color-principal);/*Color de letra*/
     padding: 40px 20px 20px 20px;/*Espacio interior*/
     margin-top: 60px;/*Deja un margen exterior*/
     border-top: 2px solid var(--purple-navy);/*Hace una línea en el borde superior*/
@@ -355,7 +375,7 @@ a.llamado-accion:hover {/*Se dará un atributo que cambiará el enlace cuando un
     margin-bottom: 30px;/*Deja un margen inferior*/
 }
 .seccion_final h3, .final_contenido h3 {/*En la sección final y el contenido definimos ciertos atributos del encabezado h3*/
-    color: var(--texto-claro);/*Se le da un color de letra*/
+    color: var(--color-principal);/*Se le da un color de letra*/
     margin-top: 0;/*Elimina el margen superior*/
     margin-bottom: 15px;/*Deja un margen en la parte baja*/
 }
@@ -364,7 +384,7 @@ a.llamado-accion:hover {/*Se dará un atributo que cambiará el enlace cuando un
     font-size: 0.95rem;/*El tamaño de letra*/
 }
 .final_contenido a {/*Trata los atributos de los enlances en dicha sección*/
-    color: var(--texto-claro);/*Color de la letra*/
+    color: var(--color-principal);/*Color de la letra*/
     text-decoration: none;/*Le quita el subrayado*/
     transition: color 0.3s ease;/*Le deja una animación para cambiar el color gradualmente*/
 }

@@ -22,7 +22,7 @@
             <li> <a href="#Autenticacion"> Autenticación </a></li>
             <li> <a href="#Publicaciones"> Publicaciones </a></li>
             <li> <a href="#CrearPublicacion"> Crear publicación </a></li>
-            <li> <a href="#Perfil"> Perfil </a>
+            <li> <a href="#Perfil"> Perfil </a> </li>
             <li> <a href="#Acerca_de"> Acerca de </a></li>
         </ul>
     </nav>
@@ -37,7 +37,7 @@
                 <p> <label for="registro_correo"> Correo electrónico: <input type="email" id="registro_correo" required placeholder="reed.richards4@gmail.com"> </label></p><!--Es el campo que solicita el correo electrónico-->
                 <p> <label for="registro_password"> Contraseña: <input type="password" id="registro_password" required placeholder="********"></label></p><!--Es el campo que solicita contraseña-->
                 <p> <label for="registro_telefono"> Número de teléfono: <input type="tel" id="registro_telefono" required placeholder="Ej: +506 0616-0616"></label></p><!--Es el campo que solicita el número-->
-                <p> <label for="registro_imagen"> Foto de perfil (Opcional): <input type="file" id="registro_imagen" name="imagenRegistro" accept="imagen/png, imagen/jpeg, imagen/webp"> </label></p><!--Es el campo para introducir una imagen al perfil-->
+                <p> <label for="registro_imagen"> Foto de perfil (Opcional): <input type="file" id="registro_imagen" name="imagenRegistro" accept=image/png, image/jpeg, image/webp> </label></p><!--Es el campo para introducir una imagen al perfil-->
                 <p> <label for="registro_biografia"> Biografía (Opcional): <textarea id="registro_biografia" name="bio" placeholder="Cuéntanos sobre tu negocio..."></textarea></label></p><!--Es el campo para brindar una biografía-->
                 <p> <label for="registro_local"> Tipo de emprendimiento: </label><!--Es el campo que mostrará para seleccionar el tipo de negocio (local o físico)-->
                     <select id="registro_local" name="tipo_local" required>
@@ -131,7 +131,7 @@
              <p><label for="nombre_negocio"> Negocio: <input type="text" id="nombre_negocio" placeholder="Ej: Wayne Industries"> </label></p><!--Muestra un espacio para ingresar el nombre del emprendimiento-->
 
              <p><label for="categoria">Categoría:</label><!--Muestra una etiqueta que deja seleccionar opciones prederterminadas u escribir la categoría a la que pertenece.-->
-            <input list="lista-categorias" id="categoria" name="Categoria" placeholder="Selecciona o escribe una categoría..."><!--Permite conectar con la lista con el id y muestra información de la etiqueta-->
+            <input list="lista-categorias" type="text" id="categoria" name="Categoria" placeholder="Selecciona o escribe una categoría..."><!--Permite conectar con la lista con el id y muestra información de la etiqueta-->
             <datalist id="lista-categorias"><!--Comienza la lista predeterminada con sus respectivas opciones-->
             <option value="Tecnología">
             <option value="Personalización de artículos">
@@ -196,7 +196,6 @@
     </div>
 </section>
 </main>
-</body>
 <hr>
 <footer class="final_pagina"><!--Se crea el pie de página-->
     <div class="final_contenido"><!--Se abre un div que contendrá toda la información del footer dividida por distitos div-->
@@ -208,7 +207,7 @@
             <h3> Comunidad </h3>
             <p> ¿Tienes preguntas o sugerencias? </p>
             <p> <strong> Correo electrónico: </strong> 
-                <a href="eithan.obando.retana23@gmail.com"> contacto@eithan.obando.retana23 </a>
+                <a href="mailto:eithan.obando.retana23@gmail.com"> contacto@eithan.obando.retana23 </a>
             </p>
             <p> <strong> Teléfono: </strong>
                 <a href="tel:+50670182054"> +506 7018-2054 </a>
@@ -219,4 +218,5 @@
         <p> &copy; 2026 Business Sky </p>
         </div>
 </footer>
+</body>
 </html>
